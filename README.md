@@ -8,9 +8,9 @@
 
 # Run On Your Machine?
   1. Firstly, clone the repository using the git shell 
-      - $ git clone https://github.com/Unique-01/Personal-Portfolio.git
+      - $ git clone https://github.com/Unique-01/My-Personal-Portfolio.git
   2. Goto the base directory of the project 
-     - cd myportfolio 
+     - cd My-Personal-Portfolio
   3. Create a virtual environment and activate it. 
       - $ virtualenv venv 
       - $ venv\Scripts\activate on Windows or $ source venv/bin/activate on Posix system 
