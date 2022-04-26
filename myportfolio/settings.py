@@ -140,7 +140,7 @@ EMAIL_HOST = 'smtp.gmail.com'#'smtp.mail.yahoo.com'
 EMAIL_USE_SSL = True
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'azeezsaheed2003@gmail.com'
-EMAIL_HOST_PASSWORD = password.gmail_password
+EMAIL_HOST_PASSWORD = config('gmail_password')#password.gmail_password
 
 
 #for yahoo mail
@@ -149,4 +149,4 @@ EMAIL_HOST_PASSWORD = password.gmail_password
 # EMAIL_USE_SSL = True
 # EMAIL_PORT = 465
 # EMAIL_HOST_USER = 'azeezsaheed2003@yahoo.com'
-# EMAIL_HOST_PASSWORD = password.yahoo_password
+# EMAIL_HOST_PASSWORD = config('yahoo_password')
