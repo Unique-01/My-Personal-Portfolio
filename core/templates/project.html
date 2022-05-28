@@ -1,0 +1,22 @@
+<h2>Projects</h2>
+<div class=" col">
+    {% for project in project %}
+        <div>
+            <img src="{{ project.image.url }}"
+                 alt=""
+                 class="img-responsive"
+                 height=""
+                 width=""/>
+            <h3 class="h5">{{ project.title }}</h3>
+            <p>
+                {{ project.date }}
+            </p>
+            <p>
+                {{ project.tech_used }}
+            </p>
+            <p>
+                {{ project.description }}
+            </p>
+        </div>
+    {% endfor %}
+</div>

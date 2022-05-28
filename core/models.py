@@ -8,6 +8,7 @@ class Project(models.Model):
     image = models.ImageField( upload_to='img/', height_field=None, width_field=None, max_length=None)
     tech_used = models.CharField(max_length=250, null=True,blank=True)
     description = models.TextField(blank=True,null=True)
+    add_date= models.DateTimeField(auto_now=True,null=True,blank=True)
 
     def __str__(self):
         return self.title

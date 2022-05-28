@@ -11,7 +11,7 @@ from django.views import generic
 def allparameters(request):
     education = EducationExperience.objects.all()
     skill = Skill.objects.all()
-    project = Project.objects.all()
+    project = Project.objects.all().order_by('-add_date')
     language = LanguageExperience.objects.all()
     work = WorkExperience.objects.all()
 

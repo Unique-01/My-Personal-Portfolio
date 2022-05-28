@@ -133,14 +133,13 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-from . import password #hidden passsword
 #for gmail
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'#'smtp.mail.yahoo.com'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_SSL = True
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'azeezsaheed2003@gmail.com'
-EMAIL_HOST_PASSWORD = config('gmail_password')#password.gmail_password
+EMAIL_HOST_USER = config('gmail')
+EMAIL_HOST_PASSWORD = config('gmail_password')
 
 
 #for yahoo mail
@@ -148,5 +147,5 @@ EMAIL_HOST_PASSWORD = config('gmail_password')#password.gmail_password
 # EMAIL_HOST = 'smtp.mail.yahoo.com'
 # EMAIL_USE_SSL = True
 # EMAIL_PORT = 465
-# EMAIL_HOST_USER = 'azeezsaheed2003@yahoo.com'
+# EMAIL_HOST_USER = config('yahoo_mail')
 # EMAIL_HOST_PASSWORD = config('yahoo_password')
