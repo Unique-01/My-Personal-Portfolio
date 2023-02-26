@@ -31,26 +31,6 @@ def allparameters(request):
         mail2 = ('Message submitted',confirm_message,EMAIL_HOST_USER,[recipient])
 
         send_mass_mail((mail1,mail2),fail_silently=False)
-
-        # send_mail(subject,message,EMAIL_HOST_USER,[EMAIL_HOST_USER],fail_silently=False)
-        # send_mail('Message submitted',confirm_message,EMAIL_HOST_USER,[recipient],fail_silently=False)
-
     context = {'education':education,'skill':skill,'project':project,'language':language,'work':work}
     return render(request, "index.html",context)
     
-   
-    # contact_form = forms.ContactForm()
-    # if request.method == 'POST':
-    #     contact_form = forms.ContactForm(request.POST)
-    #     if contact_form.is_valid():
-            # subject = contact_form.cleaned_data['subject']
-            # body = {
-            #     'email':contact_form.cleaned_data['email'],
-            #     'message':contact_form.cleaned_data['message']
-            # }
-            # message = '\n'.join(body.values())
-            # send_mail(subject,message,'admin@example.com',['admin@example.com'],fail_silently=False)
-    # contact_form = forms.ContactForm()
-    # return render(request, "index.html", {'contact_form':contact_form})
-    
-            
