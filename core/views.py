@@ -25,15 +25,15 @@ def allparameters(request):
         message = '\n'.join(body.values())
 
         confirm_message = 'The admin have received your message and will get back to you as soon as possible'
-        recepient = request.POST.get('email')
+        recipient = request.POST.get('email')
 
         mail1 = (subject,message,EMAIL_HOST_USER,[EMAIL_HOST_USER])
-        mail2 = ('Message submitted',confirm_message,EMAIL_HOST_USER,[recepient])
+        mail2 = ('Message submitted',confirm_message,EMAIL_HOST_USER,[recipient])
 
         send_mass_mail((mail1,mail2),fail_silently=False)
 
         # send_mail(subject,message,EMAIL_HOST_USER,[EMAIL_HOST_USER],fail_silently=False)
-        # send_mail('Message submitted',confirm_message,EMAIL_HOST_USER,[recepient],fail_silently=False)
+        # send_mail('Message submitted',confirm_message,EMAIL_HOST_USER,[recipient],fail_silently=False)
 
     context = {'education':education,'skill':skill,'project':project,'language':language,'work':work}
     return render(request, "index.html",context)

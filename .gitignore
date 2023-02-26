@@ -1,3 +1,4 @@
 # created by virtualenv automatically
 .sqlite3
 .env
+*.pyc
